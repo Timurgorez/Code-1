@@ -51,13 +51,23 @@ mail("$adminemail", "message from $name", "$secondname");
  
 // Выводим сообщение пользователю 
  
-print "<script language='Javascript'><!-- 
+print "
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+	<meta charset='UTF-8'>
+</head>
+<body>
+<script language='Javascript'><!-- 
 function reload() {location = \"$backurl\"}; setTimeout('reload()', 6000); 
 //--></script> 
 <div style='width: 500px; height: 400px; margin: 0 auto;'>
 $msg 
  
-<p>Message sent! Wait, now you will be redirected to the main page ...</p></div>";  
+<p>Message sent! Wait, now you will be redirected to the main page...</p></div>
+</body>
+</html>
+";  
 exit; 
  
  } 
